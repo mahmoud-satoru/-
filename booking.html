@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html  dir="rtl" lang"ar" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+     <nav class="top-nav">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="museum.html" class="nav-link">المتاحف</a>
+        <a href="media_gallery_3.html" class="nav-link">الوسائط</a>
+        <a href="tickets.html" class="nav-link">التذاكر</a>
+        <a href="booking.html" class="nav-link active">الحجز</a>
+        <a href="favorites.html" class="nav-link">المفضلة</a>
+        <a href="tours.html" class="nav-link ">الجولات</a>
+        <a href="contact.html" class="nav-link">تواصل</a>
+        <button id="themeBtn" class="theme-toggle" onclick="changeTheme()" aria-label="تغيير الثيم">☀</button>
+    </nav>
+
+    <header>
+    
+    </header>
+    <fieldset>
+            
+        <div id="form">
+            <h2>احجز تذكرتك</h2>
+            <form method="post">
+               <div class="inputcontrol">
+                <div id="error4"></div>
+                 
+                <input id="name" type="text" placeholder="اسم المستخدم" autofocus></div>
+                <div class="inputcontrol">
+                    <div id="error"></div>
+                    
+                
+                <input  id="num" type="text" placeholder="رقم المحمول" required></div>
+    <div class="inputcontrol">
+        <div id="error2"></div>
+                 
+                <input id="email" type="text" placeholder="الايميل" required></div>
+                <div id="error5"></div>
+                <label for="select">اختر وجهتك</label>
+                <br> <div class="select" ></div>
+                <select name="museum" id="select"   style="font-size: 25px; " >
+                    <option value="" disabled selected ></option>
+                    <option id="op"value="المتحف المصري الكبير">المتحف المصري الكبير</option>
+                <option  id="op"value="المتحف القومي للحضارة المصرية">المتحف القومي للحضارة المصرية</option>
+                <option id="op" value="المتحف المصري بالتحرير">المتحف المصري بالتحرير</option>
+                <option  id="op"value="متحف الاقصر">متحف الاقصر</option>
+                <option id="op" value="متحف النوبه">متحف النوبه</option>
+                <option id="op" value="متحف ايمحتب بسقارة">متحف ايمحتب بسقارة</option>
+
+               </div>
+                </select>
+                <br>
+                <div id="error3"></div>
+                <label for="date">اختر تاريخ الزيارة</label>
+                <br>
+                <input id ="date" type="date" required>
+                <br>
+                
+            <input  id ="send2"type="reset" value="مسح">
+                <input  id ="send2"type="submit"value="ارسال">
+
+            </form>
+
+
+        </div></fieldset>
+
+            <footer>
+                    <p>موقع الاثار والسياحة-2026</p>
+                </footer>
+        <script src="booking.js"></script>
+    
+</body>
+</html>
