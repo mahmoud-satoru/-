@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الجولات الافتراضية - مصر القديمة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tours.css">
+</head>
+<body class="tours-page">
+    <nav class="top-nav">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="museum.html" class="nav-link">المتاحف</a>
+        <a href="media_gallery_3.html" class="nav-link">الوسائط</a>
+        <a href="tickets.html" class="nav-link">التذاكر</a>
+        <a href="booking.html" class="nav-link">الحجز</a>
+        <a href="favorites.html" class="nav-link">المفضلة</a>
+        <a href="tours.html" class="nav-link ">الجولات</a>
+        <a href="contact.html" class="nav-link">تواصل</a>
+        <button id="themeBtn" class="theme-toggle" onclick="changeTheme()" aria-label="تغيير الثيم">☀</button>
+    </nav>
+
+    <header>
+        <h1 id="mainTitle"></h1>
+        <p id="title2"></p>
+    </header>
+
+    <main>
+        <section class="layout hero-tour" id="map-section">
+            <h2 id="heroText">جولات افتراضية 360 درجة</h2>
+            <p id="hero2">استكشف أهم المتاحف والمواقع الأثرية من مكانك عبر خرائط تفاعلية وفيديوهات بانورامية.</p>
+        </section>
+
+        <section class="layout">
+            <h2 class="section-title">خرائط المتاحف والمواقع</h2>
+            <div class="split-grid">
+                <article class="iframe-card">
+                    <h3>مجمع الأهرامات - الجيزة</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.452796191599!2d31.131707925565355!3d29.979234474955797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21df83%3A0xad144acd13307c31!2sThe%20Great%20Pyramid%20of%20Giza!5e0!3m2!1sen!2seg!4v1714595000000!5m2!1sen!2seg"
+                        width="100%"
+                        height="320"
+                        style="border:0;"
+                        allowfullscreen="">
+                    </iframe>
+                </article>
+                <article class="iframe-card">
+                    <h3>المتحف المصري الكبير</h3>
+                    <iframe
+                        src="https://www.google.com/maps?q=Grand%20Egyptian%20Museum&output=embed"
+                        width="100%"
+                        height="320"
+                        style="border:0;"
+                        allowfullscreen="">
+                    </iframe>
+                </article>
+            </div>
+        </section>
+
+        <section class="layout" id="video-section">
+            <h2 class="section-title">جولات 360° تفاعلية</h2>
+            <div class="single-tour-card iframe-card">
+                <h3>جولة 360 داخل موقع أثري</h3>
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ZGWNcvnQQtU?si=xK3S_3KeGEBDIwSY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>موقع الاثار والسياحة-2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tours.js"></script>
+</body>
+</html>

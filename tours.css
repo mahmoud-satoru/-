@@ -1,0 +1,197 @@
+/* الإعدادات العامة لضمان التصاق الفوتر */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding-top: 62px; /* مساحة للناف بار الثابت */
+    font-family: Arial, sans-serif;
+    transition: 0.5s;
+    background-image: url("images/Arte Egipcio.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    
+    /* نظام الفليكس لدفع الفوتر للأسفل */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+/* الناف بار - ثابت بالأعلى */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background: rgba(3, 10, 28, 0.88);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+}
+
+/* محتوى الصفحة المرن */
+.tours-page, main, .layout {
+    flex: 1; 
+}
+
+/* الهيدر بنفس ألوان الكود السابق */
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba(170, 170, 170, 0.4);
+    text-align: center;
+    border-bottom: 3px solid #d4af37;
+    color: #ffffff;
+}
+
+h1 {
+    margin: 0;
+    padding-top: 10px;
+}
+
+/* الألوان الخاصة بالوضع الفاتح (Light Mode) */
+body.light { 
+    color: #000000; 
+}
+
+body.light header { 
+    background-color: rgba(255, 255, 255, 0.5); 
+    color: #000000; 
+}
+
+/* الفوتر وتثبيته في القاع تماماً */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #d4af37;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto; /* دفع الفوتر للأسفل */
+}
+
+/* ألوان الفوتر الموحدة */
+body:not(.light) footer, body.dark footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.light footer {
+    background-color: #2d3650;
+    color: #ffffff;
+}
+
+/* التخطيط والبطاقات (Cards) */
+.layout {
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* تنسيق الكروت الموحد */
+.card {
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* كروت الوضع الفاتح */
+body.light .card {
+    background: rgba(255, 255, 255, 0.4);
+    color: #000;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* كروت الوضع الداكن */
+body:not(.light) .card, body.dark .card {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid #d4af37;
+}
+
+.card:hover { 
+    transform: translateY(-15px) scale(1.05); 
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* أزرار التنقل */
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+.nav-link:hover, .nav-link.active { 
+    background: rgba(255, 255, 255, 0.16); 
+    color: #d4af37;
+}
+
+/* زر تغيير الثيم */
+.theme-toggle {
+    margin-right: auto;
+    margin-left: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    border: none;
+    background: #d4af37;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: #f1c40f;
+}
+
+/* تعديلات صفحة Tours الخاصة */
+.tours-page .split-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.iframe-card {
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid #d4af37;
+}
+
+body.light .iframe-card { 
+    background: rgba(255, 255, 255, 0.5); 
+}
+
+/* ريسبونسيف للموبايل */
+@media (max-width: 900px) {
+    .grid, .tours-page .split-grid {
+        grid-template-columns: 1fr;
+    }
+}
