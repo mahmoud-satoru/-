@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ancient Egypt</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<div id="logoScreen">
+    <img src="egypt.png" alt="logo">
+</div>
+<header>
+<nav class="top-nav">
+
+<div class="logo">
+<img src="egypt.png" alt="logo">
+</div>
+
+
+
+     <a href="index.html" class="nav-link active">الرئيسية</a>
+<a href="museum.html" class="nav-link">المتاحف</a>
+<a href="media_gallery_3.html" class="nav-link">الوسائط</a>
+<a href="tickets.html" class="nav-link">التذاكر</a>
+<a href="booking.html" class="nav-link">الحجز</a>
+<a href="favorites.html" class="nav-link">المفضلة</a>
+<a href="tours.html" class="nav-link">الجولات</a>
+<a href="contact.html" class="nav-link">تواصل</a>
+        <button id="themeBtn" class="theme-toggle" onclick="changeTheme()" aria-label="تغيير الثيم">☀</button>
+    </nav>
+</header>
+
+<section class="slider">
+    <button class="arrow left" onclick="prevSlide()">❯</button>
+
+    <img id="sliderImage" src="ha.jpg">
+
+    <button class="arrow right" onclick="nextSlide()">❮ </button>
+</section>
+
+<!-- Hero -->
+<section class="layout">
+  <h1 id="heroText">اكتشف حضارة مصر القديمة</h1>
+<h2 id="hero2">تُعد حضارة مصر القديمة من أقدم وأعظم الحضارات في تاريخ البشرية.<br>
+نشأت هذه الحضارة على ضفاف نهر النيل الذي كان مصدر الحياة والزراعة للمصريين القدماء.<br>
+
+
+<h2>
+</section>
+
+<section class="layout">
+
+<h1 id="pop"> اشهر معالم مصر السياحيه</h1>
+
+
+
+</section >
+
+
+<!-- Cards -->
+<section class="layout grid" id="cardsContainer"></section>
+
+
+
+
+
+
+
+    <footer>
+                    <p>موقع الاثار والسياحة-2026</p>
+                </footer>
+
+
+<script src="index.js"></script>
+
+<audio id="bgMusic" loop>
+    <source src="t.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
