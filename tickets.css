@@ -1,0 +1,149 @@
+/* الإعدادات الأساسية لضمان التصاق الفوتر */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s ease-in-out;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    direction: rtl; /* لضمان التوافق مع المحتوى العربي */
+}
+
+/* الوضع الداكن والفاتح للصور */
+body.light {
+    background-image: url("tickets light.jpg");
+    color: black;
+}
+
+body.dark {
+    background-image: url("tickets dark.jpg");
+    color: white;
+}
+
+/* الطبقة الشفافة (Overlay) */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    flex: 1; /* تجعل المحتوى يتمدد لدفع الفوتر للأسفل */
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px; /* مسافة للناف بار الثابت */
+}
+
+body.light .overlay {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* القائمة العلوية الثابتة */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background: rgba(3, 10, 28, 0.88);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: rgba(255, 255, 255, 0.16);
+    color: #d4af37;
+}
+
+/* العناوين */
+h2 {
+    text-align: center;
+    color: #d4af37; /* اللون الذهبي الموحد */
+    margin: 20px 0;
+}
+
+/* الجداول */
+table {
+    backdrop-filter: blur(10px);
+    width: 80%;
+    margin: 20px auto; /* توسيط تلقائي */
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #d4af37;
+}
+
+body.light table {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #2d3650;
+}
+
+th, td {
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    padding: 15px;
+    text-align: center;
+}
+
+body.dark th, body.dark td { color: aliceblue; }
+body.light th, body.light td { color: #000; }
+
+th {
+    background: rgba(49, 58, 71, 0.8);
+    color: #d4af37 !important;
+}
+
+/* زر الحجز */
+#button {
+    background: #d4af37;
+    color: black;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto; /* توسيط الزر */
+    transition: 0.3s;
+}
+
+#button:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* الفوتر وتثبيته في القاع */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #d4af37;
+    margin-top: auto; /* دفع الفوتر لآخر الصفحة */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body:not(.light) footer, body.dark footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.light footer {
+    background-color: #2d3650;
+    color: #ffffff;
+}
