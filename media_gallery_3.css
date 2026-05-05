@@ -1,0 +1,167 @@
+/* الإعدادات الأساسية لضمان التصاق الفوتر */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Cairo', 'Arial', sans-serif;
+    transition: 0.5s ease-in-out;
+   background-image: url("tt.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #000; /* اللون الافتراضي للوضع الفاتح */
+    direction: rtl;
+}
+body.dark-mode {
+    background-image: url("فرعون.jpg"); /* ضع هنا اسم صورة الليل */
+    color: white;
+}
+
+/* --- الوضع الليلي (Dark Mode) حسب الـ JS المرفق --- */
+body.dark-mode {
+    color: white;
+}
+
+body.dark-mode .museum-card, 
+body.dark-mode .fav-card {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    border: 1px solid #d4af37;
+}
+
+body.dark-mode header {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* --- الناف بار والروابط --- */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background: rgba(3, 10, 28, 0.88);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #d4af37;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- الهيدر --- */
+header {
+    margin-top: 62px;
+    padding: 30px;
+    background: rgba(170, 170, 170, 0.4);
+    text-align: center;
+    border-bottom: 3px solid #d4af37;
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    margin: 0;
+    color: #d4af37;
+}
+
+/* --- كروت الفيديوهات والوسائط --- */
+.gallery-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.museum-card, .fav-card {
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.museum-card:hover, .fav-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    background: #000;
+}
+
+/* --- الأزرار (إضافة للمفضلة / حذف) --- */
+button {
+    background: #d4af37;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* زر تغيير الثيم */
+.theme-toggle {
+    margin-right: auto;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- الفوتر --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #d4af37;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* ألوان الفوتر التلقائية */
+body:not(.dark-mode) footer {
+    background-color: #2d3650;
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #000000;
+    color: white;
+}

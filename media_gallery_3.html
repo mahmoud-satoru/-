@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الوسائط - متاحف مصر</title>
+    <!-- ربط ملف الـ CSS -->
+
+   <link rel="stylesheet" href="media_gallery_3.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="museum.html" class="nav-link">المتاحف</a>
+        <a href="media_gallery_3.html" class="nav-link active">الوسائط</a>
+        <a href="tickets.html" class="nav-link">التذاكر</a>
+        <a href="booking.html" class="nav-link">الحجز</a>
+        <a href="Favorites.html" class="nav-link">المفضلة</a>
+        <a href="tours.html" class="nav-link">الجولات</a>
+        <a href="contact.html" class="nav-link">تواصل</a>
+        <button id="themeBtn" class="theme-toggle" onclick="changeTheme()" aria-label="تغيير الثيم">☀️</button>
+    </nav>
+
+    <header>
+        <h1>دليل الوسائط المتحفية</h1>
+        <p>استكشف عظمة الحضارة المصرية بالصوت والصورة</p>
+    </header>
+
+    <main class="container">
+        <div class="gallery-grid">
+            <!-- البطاقة 1 -->
+            <div class="museum-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="videos/v1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h3>المتحف القومي للحضاره المصريه</h3>
+                    <audio controls>
+                        <source src="audios/s1.m4a" type="audio/mpeg">
+                    </audio>
+                    <button class="fav-btn" onclick="addToFavorites(1, 'المتحف القومي للحضاره المصريه', 'videos/v1.mp4')">❤️ أضف للمفضلة</button>
+                </div>
+            </div>
+
+            <!-- البطاقة 2 -->
+            <div class="museum-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="videos/v2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h3>المتحف المصري الكبير</h3>
+                    <audio controls>
+                        <source src="audios/s2.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="fav-btn" onclick="addToFavorites(2, 'المتحف المصري الكبير', 'videos/v2.mp4')">❤️ أضف للمفضلة</button>
+                </div>
+            </div>
+
+            <!-- البطاقة 3 -->
+            <div class="museum-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="videos/v3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h3>متحف إيمحتب بسقارة</h3>
+                    <audio controls>
+                        <source src="audios/s3.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="fav-btn" onclick="addToFavorites(3, 'متحف إيمحتب بسقارة', 'videos/v3.mp4')">❤️ أضف للمفضلة</button>
+                </div>
+            </div>
+
+            <!-- البطاقة 4 -->
+            <div class="museum-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="videos/v4.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h3>المتحف المصري بالتحرير</h3>
+                    <audio controls>
+                        <source src="audios/s4.m4a" type="audio/mpeg">
+                    </audio>
+                    <button class="fav-btn" onclick="addToFavorites(4, 'المتحف المصري بالتحرير', 'videos/v4.mp4')">❤️ أضف للمفضلة</button>
+                </div>
+            </div>
+
+            <!-- البطاقة 5 -->
+            <div class="museum-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="videos/v5.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h3>متحف النوبة</h3>
+                    <audio controls>
+                        <source src="audios/s5.m4a" type="audio/mpeg">
+                    </audio>
+                    <button class="fav-btn" onclick="addToFavorites(5, 'متحف النوبة', 'videos/v5.mp4')">❤️ أضف للمفضلة</button>
+                </div>
+            </div>
+
+            <!-- البطاقة 6 -->
+            <div class="museum-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="videos/v6.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h3>متحف الأقصر</h3>
+                    <audio controls>
+                        <source src="audios/s6.m4a" type="audio/mpeg">
+                    </audio>
+                    <button class="fav-btn" onclick="addToFavorites(6, 'متحف الأقصر', 'videos/v6.mp4')">❤️ أضف للمفضلة</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>موقع الاثار والسياحة-2026</p>
+    </footer>
+
+    <!-- ربط ملف الـ JavaScript المحدث -->
+    <script src="media_gallery_3.js"></script>
+</body>
+</html>
